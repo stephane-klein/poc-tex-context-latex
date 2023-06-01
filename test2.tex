@@ -1,0 +1,28 @@
+\setuppapersize[A4][A4]
+\setuplayout[
+    backspace=0mm,
+    width=210mm,
+    leftmargin=0mm,
+    topspace=0mm,
+    top=0mm,
+    header=4cm,
+    footer=1cm,
+    height=297mm
+]
+\definecolor[MyColor][r=0.937,g=0.92,b=0.905]
+\setupbackgrounds[header] [background=color, backgroundcolor=white]
+\setupbackgrounds[page] [background=color, backgroundcolor=MyColor]
+
+\useexternalfigure[logo_airtech][logo.jpg][width=8cm]
+
+% \definelayer [Logo][location={left,top}]
+
+\starttext
+    \showlayout[cm]
+    \showgrid
+
+Hello worlda
+
+\externalfigure[logo_airtech]
+
+\stoptext
