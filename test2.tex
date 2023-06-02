@@ -9,14 +9,33 @@
     footer=1cm,
     height=297mm
 ]
-\definecolor[MyColor][r=0.937,g=0.92,b=0.905]
-\setupbackgrounds[header] [background=color, backgroundcolor=white]
-\setupbackgrounds[page] [background=color, backgroundcolor=MyColor]
 
 \useexternalfigure[logo_airtech][logo.jpg][width=8cm]
 
-% \definelayer [Logo][location={left,top}]
+\definelayer
+    [Header]
+    [
+        location={left,bottom},
+        x=\paperwidth,
+        y=0mm,
+        hoffset=0mm,
+        voffset=0mm,
+    ]
 
+\setlayer[Header]{
+    \framed[width=\paperwidth,height=4cm,background=color,backgroundcolor=white,frame=off,align=right]{
+        \externalfigure[logo_airtech]
+        blabla
+    }
+}
+
+\definecolor[MyColor][r=0.937,g=0.92,b=0.905]
+\setupbackgrounds[header][background=Header]
+% \setupbackgrounds[header] [background=color, backgroundcolor=white]
+\setupbackgrounds[page] [background=color, backgroundcolor=MyColor]
+
+
+% \definelayer [Logo][location={left,top}]
 \starttext
     \showlayout[cm]
     \showgrid
