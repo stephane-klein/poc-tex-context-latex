@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{multicol}
+% \usepackage{graphics}
+\pagestyle{fancy}
+
+\fancyhead[L]{
+    \includegraphics[
+        width=4cm,
+        keepaspectratio
+    ]{logo.jpg}
+}
+\fancyhead[R]{\textbf{The performance of new graduates}}
+\fancyfoot[L]{From: K. Grant}
+\fancyfoot[C]{To: Dean A. Smith}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{2pt}
+
+\begin{document}
+Small is beautiful.
+
+\includegraphics[
+    width=4cm,
+    keepaspectratio
+]{logo.jpg}
+
+
+\begin{multicols}{3}
+    \noindent
+    110 rue du Charles De Gaulle\newline
+    57001 Metz\newline
+    France\columnbreak
+
+    \noindent
+    Téléphone : +33 6 61 10 10 10\newline
+    Fax : +352 58 10 14\columnbreak
+
+    \noindent
+    E-mail : contact@example.com\newline
+    Site web : www.example.com
+\end{multicols}
+
+\end{document}
