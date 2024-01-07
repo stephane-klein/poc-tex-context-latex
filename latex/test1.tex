@@ -1,45 +1,47 @@
 \documentclass{article}
 \usepackage{fancyhdr}
+\usepackage[export]{adjustbox}
+\usepackage{multirow, tabularx}
 \usepackage{graphicx}
 \usepackage{multicol}
-% \usepackage{graphics}
+\usepackage{lipsum}
+% \usepackage[showframe]{geometry}
+% \usepackage[a4paper,top=3cm]{geometry}
 \pagestyle{fancy}
+\usepackage[
+    % showframe,
+    hmargin=0cm,
+    headheight=2.5cm,
+    top=3cm,
+    headsep=5mm,
+    a4paper,
+    verbose=true
+]{geometry}
+% \usepackage[a4paper,hscale=1,nohead,includehead,verbose=true,top=3cm]{geometry}
 
+\fancyhf{}
 \fancyhead[L]{
-    \includegraphics[
-        width=4cm,
-        keepaspectratio
-    ]{logo.jpg}
+    \begin{minipage}{\textwidth}
+        \hspace{2mm}
+        \begin{minipage}{0.25\textwidth}% adapt widths of minipages to your needs
+            \includegraphics[width=\linewidth]{logo.jpg}
+        \end{minipage}%
+        \hspace{5mm}
+        \begin{minipage}{0.6\textwidth}
+            \small{
+                \begin{tabbing}
+                    110 rue du Charles De Gaulle \hspace{2mm} \= Téléphone : +33 6 61 10 10 10 \hspace{2mm} \= E-mail : contact@example.com \\
+                    57001 Metz                                \> Fax : +352 58 10 14                        \> Site web : www.example.com   \\
+                    France \\
+                \end{tabbing}
+            }
+        \end{minipage}
+    \end{minipage}
 }
-\fancyhead[R]{\textbf{The performance of new graduates}}
-\fancyfoot[L]{From: K. Grant}
-\fancyfoot[C]{To: Dean A. Smith}
-\fancyfoot[R]{\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{2pt}
+\renewcommand{\headrulewidth}{0pt}
 
 \begin{document}
-Small is beautiful.
 
-\includegraphics[
-    width=4cm,
-    keepaspectratio
-]{logo.jpg}
-
-
-\begin{multicols}{3}
-    \noindent
-    110 rue du Charles De Gaulle\newline
-    57001 Metz\newline
-    France\columnbreak
-
-    \noindent
-    Téléphone : +33 6 61 10 10 10\newline
-    Fax : +352 58 10 14\columnbreak
-
-    \noindent
-    E-mail : contact@example.com\newline
-    Site web : www.example.com
-\end{multicols}
+\lipsum[1-10]
 
 \end{document}
