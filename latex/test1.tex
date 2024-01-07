@@ -29,9 +29,15 @@
 ]{geometry}
 % \usepackage[a4paper,hscale=1,nohead,includehead,verbose=true,top=3cm]{geometry}
 \definecolor{blue}{HTML}{0071b9}
+\definecolor{fond}{HTML}{efece7}
+
+% \usepackage{background}
+% \backgroundsetup{color=red}
+\pagecolor{fond}
 
 \fancyhf{}
 \fancyhead[L]{
+    \colorbox{white}{
     \begin{minipage}{\textwidth}
         \hspace{2mm}
         \begin{minipage}{0.25\textwidth}% adapt widths of minipages to your needs
@@ -47,7 +53,7 @@
                 \end{tabbing}
             }}
         \end{minipage}
-    \end{minipage}
+    \end{minipage}}
 }
 \renewcommand{\headrulewidth}{0pt}
 
