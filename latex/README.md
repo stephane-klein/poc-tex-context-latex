@@ -1,5 +1,5 @@
 ```sh
-$ sudo dnf install texlive
+$ sudo dnf install texlive texlive-lipsum texlive-droid texlive-babel-french
 ```
 
 ```sh

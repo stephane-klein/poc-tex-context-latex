@@ -1,9 +1,18 @@
 \documentclass{article}
+\usepackage{ae,lmodern}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{fancyhdr}
 \usepackage[export]{adjustbox}
 \usepackage{multirow, tabularx}
-\usepackage[default]{droidsans}
+% \usepackage[default]{droidsans}
+\usepackage[
+    rm={oldstyle},
+    sf={lining=true,proportional}
+]{cfr-lm}
 \usepackage{graphicx}
+\usepackage{xcolor}
 \usepackage{multicol}
 \usepackage{lipsum}
 % \usepackage[showframe]{geometry}
@@ -19,6 +28,7 @@
     verbose=true
 ]{geometry}
 % \usepackage[a4paper,hscale=1,nohead,includehead,verbose=true,top=3cm]{geometry}
+\definecolor{blue}{HTML}{0071b9}
 
 \fancyhf{}
 \fancyhead[L]{
@@ -29,10 +39,10 @@
         \end{minipage}%
         \hspace{5mm}
         \begin{minipage}{0.6\textwidth}
-            \textbf{\small{
+            \textsf{\small{
                 \begin{tabbing}
-                    110 rue du Charles De Gaulle \hspace{2mm} \= Téléphone : +33 6 61 10 10 10 \hspace{2mm} \= E-mail : contact@example.com \\
-                    57001 Metz                                \> Fax : +352 58 10 14                        \> Site web : www.example.com   \\
+                    110 rue du Charles De Gaulle \hspace{2mm} \= \textcolor{blue}{Téléphone :} +33 6 61 10 10 10 \hspace{2mm} \= \textcolor{blue}{E-mail :} contact@example.com \\
+                    \textmd{57001 Metz}                       \> \textcolor{blue}{Fax :} +352 58 10 14                        \> \textcolor{blue}{Site web :} www.example.com   \\
                     France \\
                 \end{tabbing}
             }}
