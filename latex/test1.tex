@@ -6,7 +6,6 @@
 \usepackage{fancyhdr}
 \usepackage[export]{adjustbox}
 \usepackage{multirow, tabularx}
-% \usepackage[default]{droidsans}
 \usepackage[
     rm={oldstyle},
     sf={lining=true,proportional}
@@ -15,32 +14,30 @@
 \usepackage{xcolor}
 \usepackage{multicol}
 \usepackage{lipsum}
-% \usepackage[showframe]{geometry}
-% \usepackage[a4paper,top=3cm]{geometry}
 \pagestyle{fancy}
 \usepackage[
     % showframe,
-    hmargin=0cm,
+    left=1cm,
+    right=1cm,
     headheight=2.5cm,
-    top=3cm,
-    headsep=5mm,
+    top=2.5cm,
+    headsep=0cm,
     a4paper,
+    nomarginpar,
     verbose=true
 ]{geometry}
-% \usepackage[a4paper,hscale=1,nohead,includehead,verbose=true,top=3cm]{geometry}
 \definecolor{blue}{HTML}{0071b9}
 \definecolor{fond}{HTML}{efece7}
 
-% \usepackage{background}
-% \backgroundsetup{color=red}
 \pagecolor{fond}
 
 \fancyhf{}
 \fancyhead[L]{
+    \hspace*{-1cm}%
     \colorbox{white}{
-    \begin{minipage}{\textwidth}
-        \hspace{2mm}
-        \begin{minipage}{0.25\textwidth}% adapt widths of minipages to your needs
+    \begin{minipage}{\paperwidth}
+        \hspace*{1cm}%
+        \begin{minipage}{0.2\textwidth}% adapt widths of minipages to your needs
             \includegraphics[width=\linewidth]{logo.jpg}
         \end{minipage}%
         \hspace{5mm}
